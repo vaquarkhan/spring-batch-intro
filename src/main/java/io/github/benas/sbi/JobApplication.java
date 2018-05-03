@@ -1,18 +1,13 @@
 package io.github.benas.sbi;
 
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobParameters;
-import org.springframework.batch.core.launch.JobLauncher;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class JobApplication {
 
-	public static void main(String[] args) throws Exception {
-		ApplicationContext context = new AnnotationConfigApplicationContext(JobConfiguration.class);
-		JobLauncher jobLauncher = context.getBean(JobLauncher.class);
-		Job job = context.getBean(Job.class);
-		jobLauncher.run(job, new JobParameters());
+	public static void main(String[] args) {
+		SpringApplication.run(JobApplication.class, args);
 	}
 
 }
