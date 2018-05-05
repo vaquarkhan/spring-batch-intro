@@ -1,6 +1,7 @@
 package io.github.benas.sbi;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.batch.core.ExitStatus;
@@ -21,6 +22,7 @@ public class JobTest {
 	@Autowired
 	private JobLauncherTestUtils jobLauncherTestUtils;
 
+	@Ignore
 	@Test
 	public void testJob() throws Exception {
 		// given
